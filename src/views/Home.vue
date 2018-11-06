@@ -1,13 +1,13 @@
 <template>
-    <v-container fluid class="home-container">
+    <v-container fluid fill-height class="home-container">
         <v-layout column justify-center align-center>
 
             <v-layout row wrap class="aoc-div" xs4>
                 <v-flex column wrap class="text-aoc-div">
                     <h1>Advent of Code</h1>
                     <v-layout>
-                        <span id="bar-aoc-year"></span>
                         <v-spacer/>
+                        <span id="bar-aoc-year"></span>
                         <h2 id="year">2018</h2>
                     </v-layout>
                 </v-flex>
@@ -17,7 +17,10 @@
                 </v-flex>
             </v-layout>
 
+            <v-flex>
+            </v-flex>
             <h1 class="hint-title">Rust Benchmarking platform for AoC 2018 </h1>
+            <v-spacer/>
         </v-layout>
     </v-container>
 </template>
@@ -36,12 +39,13 @@
 <style scoped lang="scss">
 
     .hint-title {
-        color: #555555;
-        margin: 2em;
+        color: #666666;
     }
 
     .aoc-div {
         max-width: 25em;
+        justify-content: center;
+        align-items: center;
     }
 
     .text-aoc-div {
@@ -51,14 +55,15 @@
     }
 
     .rust-logo {
-        width: 100px;
-        height: 100px;
+        width: 10em;
+        height: 10em;
     }
 
     #bar-aoc-year {
         display: block;
         min-width: 2px;
         height: 2em;
+        margin-right: 1em;
         background-color: #888888;
     }
 

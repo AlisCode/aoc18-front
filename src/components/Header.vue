@@ -1,21 +1,23 @@
 <template>
     <v-toolbar app>
         <v-toolbar-title class="headline text-uppercase logo">
-            <v-layout justify-center align-center>
-                <span>AoC 2018</span>
-                <RustLogo class="rust-logo"/>
-            </v-layout>
+            <router-link to="/">
+                <v-layout justify-center align-center>
+                    <span>AoC 2018</span>
+                    <RustLogo class="rust-logo"/>
+                </v-layout>
+            </router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn
                 flat
-                href="https://github.com/vuetifyjs/vuetify/releases/latest"
+                to="/scoreboard"
         >
             <span class="mr-2">Scoreboard</span>
         </v-btn>
         <v-btn
                 flat
-                href="https://github.com/vuetifyjs/vuetify/releases/latest"
+                to="/login"
         >
             <span class="mr-2">Login</span>
         </v-btn>
@@ -34,7 +36,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .rust-logo {
         width: 50px;
@@ -43,6 +45,13 @@
 
     .logo {
         cursor: pointer;
+
+        & a {
+            color: #222222;
+            text-decoration: none;
+
+        }
+
     }
 
 </style>

@@ -1,46 +1,43 @@
 <template>
-    <v-container fluid class="footer-bg">
-        <v-layout>
-            <v-flex class="copyright" xs2>
-                <p>Licensed under <br/>CC BY-SA 2.0</p>
-                <span>
+    <v-layout class="footer-bg">
+        <v-flex class="copyright" xs2>
+            <p>Licensed under <br/>CC BY-SA 2.0</p>
+            <span>
                     <img src="https://creativecommons.org/images/deed/cc_icon_white_x2.png" alt="cc">
                     <img src="https://creativecommons.org/images/deed/attribution_icon_white_x2.png" alt="by">
                     <img src="https://creativecommons.org/images/deed/sa_white_x2.png" alt="sa">
                 </span>
-            </v-flex>
+        </v-flex>
 
-            <v-flex class="copy-author" justify-center align-left xs2>
+        <v-flex class="copy-author" justify-center align-left xs2>
                 <span>
-                <a href="https://gitlab.com/opinon">@opinon</a>
+                <a href="https://github.com/aliscode">@aliscode</a>
                 front + back
                 </span>
-                <span>
+            <span>
                 <a href="https://github.com/gobanos">@gobanos</a>
                 aoc-crates + server
                 </span>
-            </v-flex>
+        </v-flex>
 
-            <v-spacer/>
+        <v-spacer/>
 
-            <v-flex class="rust-logo" xs1 justify-center align-center>
-                <a href="https://www.rust-lang.org/en-US/">
-                    <RustLogo class="rust-logo"/>
-                </a>
-            </v-flex>
+        <v-flex class="rust-logo" xs1 justify-center align-center>
+            <a href="https://www.rust-lang.org/en-US/">
+                <RustLogo class="rust-logo"/>
+            </a>
+        </v-flex>
 
-            <v-spacer/>
+        <v-spacer/>
 
-            <v-flex xs2 justify-center align-center class="link-footer">
-                <a href="mailto:oliv.pinon@gmail.com">Contact</a>
-            </v-flex>
+        <v-flex xs2 justify-center align-center class="link-footer">
+            <a href="mailto:oliv.pinon@gmail.com">Contact</a>
+        </v-flex>
 
-            <v-flex xs2 justify-center align-center class="link-footer">
-                <a>About</a>
-            </v-flex>
-        </v-layout>
-
-    </v-container>
+        <v-flex xs2 justify-center align-center class="link-footer">
+            <router-link to="/about">About</router-link>
+        </v-flex>
+    </v-layout>
 </template>
 
 <script>
@@ -59,13 +56,15 @@
 
     .footer-bg {
         background-color: #2c2c2c;
-        max-height: 10em;
         color: #EEEEEE;
+        max-height: 8.5em;
+        padding: 1em;
     }
 
     .copyright {
 
         text-align: center;
+        font-weight: bold;
 
         & img {
             width: 2em;
@@ -85,11 +84,14 @@
         flex-direction: column;
     }
 
-    .rust-logo path {
+    .rust-logo {
         width: 75px;
         height: 75px;
-        fill: #EEEEEE;
-        stroke: #EEEEEE;
+
+        & path {
+            fill: #EEEEEE;
+            stroke: #EEEEEE;
+        }
     }
 
     .link-footer {

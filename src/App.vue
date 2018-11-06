@@ -3,12 +3,14 @@
         <Header></Header>
 
         <v-content>
-            <router-view/>
+            <v-slide-y-transition>
+                <router-view/>
+            </v-slide-y-transition>
         </v-content>
 
-        <v-footer>
-            <Footer></Footer>
-        </v-footer>
+        <Footer></Footer>
+        <!-- <v-footer app>
+        </v-footer> -->
     </v-app>
 </template>
 
