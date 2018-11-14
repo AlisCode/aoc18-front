@@ -1,5 +1,5 @@
 <template>
-    <h1>Login Github</h1>
+    <h1>Login Gitlab</h1>
 </template>
 
 <script>

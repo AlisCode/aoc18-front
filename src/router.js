@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 import Login from './views/login/Login.vue'
 import Scoreboard from './views/Scoreboard.vue'
 import LoginGithub from './views/login/LoginGithub.vue'
+import LoginGitlab from './views/login/LoginGitlab.vue'
 
 Vue.use(Router)
 
@@ -26,6 +27,10 @@ export default new Router({
             path: '/login/github',
             name: 'login_github',
             component: LoginGithub
+        }, {
+            path: '/login/gitlab',
+            name: 'login_gitlab',
+            component: LoginGitlab
         },
         {
             path: '/scoreboard',
