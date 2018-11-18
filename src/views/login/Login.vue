@@ -51,7 +51,9 @@ export default {
     },
     gitlabLink() {
       return (
-        "https://gitlab.com/oauth/authorize?redirect_uri=' + process.env.VUE_APP_GL_REDIRECT + '&response_type=code&client_id=" +
+        "https://gitlab.com/oauth/authorize?redirect_uri=" +
+        process.env.VUE_APP_GL_REDIRECT +
+        "&response_type=code&client_id=" +
         process.env.VUE_APP_GL_CLIENT_ID
       );
     }

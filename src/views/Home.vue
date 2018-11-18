@@ -26,45 +26,42 @@
 </template>
 
 <script>
+import RustLogo from "../assets/rust-logo.svg";
 
-    import RustLogo from '../assets/rust-logo.svg';
-
-    export default {
-        components: {
-            RustLogo,
-        }
-    }
+export default {
+  components: {
+    RustLogo
+  }
+};
 </script>
 
 <style scoped lang="scss">
+.hint-title {
+  color: #666666;
+}
 
-    .hint-title {
-        color: #666666;
-    }
+.aoc-div {
+  max-width: 25em;
+  justify-content: center;
+  align-items: center;
+}
 
-    .aoc-div {
-        max-width: 25em;
-        justify-content: center;
-        align-items: center;
-    }
+.text-aoc-div {
+  font-weight: bold;
+  max-width: 14em;
+  text-align: right;
+}
 
-    .text-aoc-div {
-        font-weight: bold;
-        max-width: 14em;
-        text-align: right;
-    }
+.rust-logo {
+  width: 10em;
+  height: 10em;
+}
 
-    .rust-logo {
-        width: 10em;
-        height: 10em;
-    }
-
-    #bar-aoc-year {
-        display: block;
-        min-width: 2px;
-        height: 2em;
-        margin-right: 1em;
-        background-color: #888888;
-    }
-
+#bar-aoc-year {
+  display: block;
+  min-width: 2px;
+  height: 2em;
+  margin-right: 1em;
+  background-color: #888888;
+}
 </style>

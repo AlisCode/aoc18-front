@@ -3,8 +3,22 @@
 </template>
 
 <script>
+import Cookies from "js-cookie";
+import { mapActions } from "vuex";
+
 export default {
-  name: "LoginGithub"
+  name: "LoginGitlab",
+  methods: {
+    ...mapActions({
+      actLogin: "login/actLogin"
+    })
+  },
+  mounted() {
+    let flash = Cookies.get("_flash");
+    if (flash != null) {
+      this.actLogin({ provider: "Gitlab", flash: flash });
+    }
+  }
 };
 </script>
 

@@ -15,7 +15,7 @@
         >
             <span class="mr-2">Scoreboard</span>
         </v-btn>
-        <v-btn
+        <v-btn v-show="!isLogged"
                 flat
                 to="/login"
         >
@@ -25,33 +25,34 @@
 </template>
 
 <script>
+import RustLogo from "../assets/rust-logo.svg";
+import { mapGetters } from "vuex";
 
-    import RustLogo from '../assets/rust-logo.svg';
-
-    export default {
-        name: "Header",
-        components: {
-            RustLogo,
-        }
-    }
+export default {
+  name: "Header",
+  components: {
+    RustLogo
+  },
+  computed: {
+    ...mapGetters({
+      isLogged: "login/is_logged"
+    })
+  }
+};
 </script>
 
 <style scoped lang="scss">
+.rust-logo {
+  width: 50px;
+  height: 50px;
+}
 
-    .rust-logo {
-        width: 50px;
-        height: 50px;
-    }
+.logo {
+  cursor: pointer;
 
-    .logo {
-        cursor: pointer;
-
-        & a {
-            color: #222222;
-            text-decoration: none;
-
-        }
-
-    }
-
+  & a {
+    color: #222222;
+    text-decoration: none;
+  }
+}
 </style>

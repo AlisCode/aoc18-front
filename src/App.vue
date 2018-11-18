@@ -9,25 +9,32 @@
         </v-content>
 
         <Footer></Footer>
-        <!-- <v-footer app>
-        </v-footer> -->
     </v-app>
 </template>
 
 <script>
-    import Header from './components/Header';
-    import Footer from './components/Footer';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { mapActions } from "vuex";
 
-    export default {
-        name: 'App',
-        components: {
-            Header,
-            Footer
-        },
-        data() {
-            return {
-                //
-            }
-        }
-    }
+export default {
+  name: "App",
+  components: {
+    Header,
+    Footer
+  },
+  data() {
+    return {
+      //
+    };
+  },
+  methods: {
+    ...mapActions({
+      checkLogin: "login/checkLogin"
+    })
+  },
+  mounted() {
+    this.checkLogin();
+  }
+};
 </script>
